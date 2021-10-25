@@ -1,0 +1,8 @@
+@mixin header-links($fz: 14px, $lh: 16px, $ls: 0.02em) {
+  font-size: $fz;
+  line-height: $lh;
+  letter-spacing: $ls;
+  font-weight: 500;
+
+  transition: background-color var(--trans-duration) var(--timing-function);
+}

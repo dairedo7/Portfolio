@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Junior developer Blog</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <p>Blog</p>
+      <nav>
+        <a href="index.html">Main page</a>
+      </nav>
+    </header>
+    <main>
+<article>
+        <h1> Day thirteen. Found article </h1>
+        <p> I thought it would be useful. </p>
+
+        <h2> What are headings for? </h2>
+
+        <h3 id = "content"> Table of Contents </h3>
+        <ul>
+          <li>
+            <a href="#intro"> Introduction </a>
+          </li>
+          <li>
+            <a href="#heading"> Headings and Implicit Sections </a>
+          </li>
+          <li>
+            <a href="#sections"> Section Tag </a>
+          </li>
+          <li>
+            <a href="#levels"> Heading Levels </a>
+          </li>
+          <li>
+            <a href="#easy"> Not so simple </a>
+          </li>
+        </ul>
+
+        <article>
+          <h3 id = "intro"> Introduction </h3>
+
+          <p> When HTML was invented many years ago, the world was very different. The authors of the specification were inspired by text documents, where paragraphs, lists, tables, pictures and, of course, headings were in a row in one stream. Just like in your essays and term papers: the largest heading is the title, the smaller headings are parts or chapters. </p>
+
+          <h3 id = "heading"> Headings and Implicit Sections </h3>
+
+          <p> HTML has since had six levels of headings, from h1 to h6. They head everything that follows and form so-called implicit sections. Such logical parts of the page. They are implicit because they only close when the next heading appears. </p>
+
+          <pre> <code> & lt; h1 & gt; Food & lt; / h1 & gt;
+  & lt; h2 & gt; Fruit & lt; / h2 & gt;
+  & lt; p & gt; Cool & lt; / p & gt;
+    & lt; h3 & gt; Apples & lt; / h3 & gt;
+    & lt; p & gt; Generally & lt; / p & gt; </code> </pre>
+
+          <p> Because of this implicit sectioning system, the spec strongly recommends against using h * elements for caption titles. This is a normal paragraph, and the heading should denote a separate piece of content. The spec has a chapter with examples of markup for complex elements: signatures, crumbs, dialogs - read it. </p>
+
+          <h3 id = "sections"> Section Tag </h3>
+
+          <p> But sections are best defined explicitly using the section element. These two snippets are semantically identical, but this one is much clearer, albeit more verbose. </p>
+          <pre> <code> & lt; h1 & gt; Food & lt; / h1 & gt;
+& lt; section & gt;
+  & lt; h2 & gt; Fruit & lt; / h2 & gt;
+  & lt; p & gt; Cool & lt; / p & gt;
+  & lt; section & gt;
+    & lt; h3 & gt; Apples & lt; / h3 & gt;
+    & lt; p & gt; Generally & lt; / p & gt;
+  & lt; / section & gt;
+& lt; / section & gt; </code> </pre>
+
+          <h3 id = "levels"> Heading levels </h3>
+
+          <p> Okay! Since we have explicit sections, it is easy to determine the relationship of the parts by nesting. So can browsers figure out what level of headers they need? And then consider: h1, h2, ash ... lost. So it would be more convenient to swap parts of the code. The same idea occurred to the HTML5 authors and they described the outline algorithm in the specification. It allows only h1 to be used on the page, and its importance is indicated by nesting structural elements like article and section. </p>
+
+          <pre> <code> & lt; h1 & gt; Food & lt; / h1 & gt;
+& lt; section & gt;
+  & lt; h1 & gt; Fruit & lt; / h1 & gt;
+  & lt; section & gt;
+    & lt; h1 & gt; Apples & lt; / h1 & gt;
+  & lt; / section & gt;
+& lt; / section & gt; </code> </pre>
+
+          <p> The developers really liked the idea, many even rushed to implement it. But here's the trouble: the outline algorithm has not yet been implemented by any browser, reader or search engine. On such pages, all the headlines scream that they are # 1 and the most important. But if everything is important, then nothing matters. </p>
+
+          <p> Don't do that, the specification itself is now writing about it. You need to keep track of the heading level yourself. In fact, it is not that difficult: a typical page is unlikely to have more than 3 levels of structural parts. So don't be lazy. </p>
+
+          <h3 id = "easy"> Not so simple </h3>
+
+          <p> No, wait. I put a class on the div and everyone immediately sees - this is the largest heading, I put a different class - the heading becomes smaller, you can see. Why then this nonsense with the calculation of levels, if there is CSS? </p>
+
+          <pre> <code> & lt; div class = "big-black" & gt;
+  Fruit free
+& lt; / div & gt;
+& lt; div class = "small-gray" & gt;
+  Only for money
+& lt; / div & gt; </code> </pre>
+
+          <p> You are of course right, styles create a visual model of importance: large black text is more important, small gray text is not important at all. But only if you're looking at a page like this. </p>
+
+<p> You are of course right, styles create a visual model of importance: large black text is more important, small gray text is not important at all. But only if you're looking at a page like this. </p>
+
+          <p> There are two important groups of users who read your page using markup tags. They don't look at how big and black your div is - to find what matters most on the page, they look for h1. These are readers and robots. With robots, everything is clear: these are search engines that need to help understand your pages. </p>
+
+          <p> Readers or screen readers are used by people who poorly or do not see your interfaces at all, or cannot control the browser in the usual way. VoiceOver, NVDA, JAWS read content aloud and navigate only by meaningful tags. The div and span elements do not mean anything, no matter what classes and styles you wrap up. Such a site is like a newspaper without headlines, just a mess of text. </p>
+
+          <p> What a newspaper! Wake up, 2017 in the yard, I'm making an isomorphic one-page application, not a wall newspaper. I have component states here - what for is semantics where there is no text? Very good question. </p>
+
+          <p> All readers follow the page tag by tag, from first to last. And they read everything inside in a row. Extremely ineffective: each page begins with a header and while you go through it, you will forget what you were looking for. Therefore, readers have special modes that show only the important parts of the page. Structural elements header, nav, main and others, all links, all headers. </p>
+
+          <p> If you display all the headings and read them, you can compose a mental rather than a visual model of the page. And then take it and go directly to the desired section by selecting its heading. Menu, search, directory, settings, login - all of these parts of your application can be titled to make them easier to access. </p>
+
+          <pre> <code> - Instagram
+  - Ribbon
+    - Sunset
+    - Latte
+  - Settings
+  - Profile </code> </pre>
+
+          <p> But sometimes there are no headings for important parts in a design. The designer draws, everything is clear to him: a menu with a cutlet, a search with a field, and so on. But that shouldn't stop you from making accessible interfaces. Arrange the necessary headings, and then hide them easily. How? Not display: none, readers ignore it. There is a visually hidden pattern, see the video description for more details.
+
+          Think not only about what your layout looks like, but also about how logically the markup is organized. Don't forget about headings: let the styles show and the headings tell about your pages or applications. </p>
+
+          <p>
+            <a href="#content"> Back to the beginning </a>
+          </p>
+        </article>
+      </article>
+      <aside>
+        Your ads could be here
+      </aside>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </body>
+</html>

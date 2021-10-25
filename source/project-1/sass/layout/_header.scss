@@ -1,0 +1,204 @@
+.header {
+  border-bottom: 1px solid #ececec;
+
+  &__container {
+    @include flexBox($JC: space-between, $AI: center);
+
+    @media screen and (min-width: $mobile) {
+      flex-wrap: nowrap;
+    }
+    @media screen and (min-width: $desktop) {
+      align-items: initial;
+      justify-content: initial;
+    }
+  }
+}
+
+.contacts {
+  @include flexBox($AI: center);
+  @include header-links();
+
+  @media screen and (min-width: $tablet - 1px) {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: $desktop - 1px) {
+    flex-direction: row;
+    margin-left: auto;
+  }
+}
+
+.navbar-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+
+  padding-left: 0;
+  margin: 0;
+
+  &__element:nth-last-child(1n + 2) {
+    margin-right: 50px;
+  }
+
+  &__element {
+    align-items: center;
+    @include header-links();
+
+    color: var(--main-color);
+  }
+
+  &__element:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  max-width: 480px;
+  @media screen and (min-width: $tablet) {
+    flex-direction: row;
+  }
+  @media screen and (max-width: $desktop - 1px) {
+    justify-content: center;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.on-mouse-over {
+  cursor: pointer;
+
+  transition-duration: var(--trans-duration);
+  transition-property: background-color;
+  transition-timing-function: var(--timing-function);
+
+  &:hover {
+    transform: scale(1.25);
+  }
+}
+@media screen and (max-width: $tablet - 1px) {
+  .header {
+    &__container {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    &__burger-btn {
+      width: 40px;
+      height: 40px;
+
+      line-height: 0;
+
+      background-color: transparent;
+      border: none;
+      padding: 0;
+
+      &:hover .header__burger-icon,
+      &:focus .header__burger-icon {
+        fill: var(--accent-color);
+      }
+    }
+
+    &__burger-icon {
+      width: 24px;
+      height: 16px;
+      fill: var(--main-color);
+    }
+  }
+
+  .navbar-list {
+    display: none;
+  }
+
+  .contacts {
+    display: none;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .header__burger-btn {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .navbar-list {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .navbar-list .nav-link {
+    display: block;
+    position: relative;
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    @include header-links();
+    text-decoration: none;
+    color: var(--main-color);
+    transition: color var(--trans-duration) var(--timing-function);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+}
+
+@media screen and (min-width: $tablet - 1px) {
+  .mail,
+  .phone {
+    margin-right: 10px;
+    transition: background-color var(--trans-duration) var(--timing-function);
+
+    &:hover {
+      fill: #03a9f4;
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .mail,
+  .phone {
+    fill: currentColor;
+  }
+}
+
+.navbar-list .nav-link--active {
+  color: var(--accent-color);
+
+  &.nav-link--active::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+
+    border-radius: 2px;
+    background-color: var(--accent-color);
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .mail__link {
+    margin-right: 30px;
+  }
+}

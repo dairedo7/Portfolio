@@ -1,0 +1,150 @@
+.studio-wrapper {
+  @media screen and (max-width: $desktop) {
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-right: 70px;
+  }
+}
+
+.footer {
+  background: var(--bg-dark);
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+  color: var(--white-color);
+}
+.footer__container {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+
+.flex-wrap {
+  @media screen and (min-width: $tablet) {
+    @include flexBox($JC: space-around);
+  }
+}
+
+.footer__container .mail__link,
+.footer__container .phone__link {
+  color: rgba(255, 255, 255, 0.6);
+  margin-right: 0;
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: center;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+.address {
+  font-style: normal;
+  &--link {
+    line-height: 1.71;
+    color: var(--white-color);
+    transition: color var(--trans-duration) var(--timing-function);
+
+    &:focus,
+    &:hover {
+      color: var(--accent-color);
+    }
+  }
+  & .contacts__info {
+    line-height: 1.71;
+    padding: 0;
+  }
+
+  & .studio__item {
+    margin-bottom: 9px;
+
+    @media screen and (max-width: $desktop) {
+      text-align: center;
+    }
+  }
+}
+
+.join {
+  padding: 0;
+  @media screen and (max-width: $desktop) {
+    margin-bottom: 60px;
+  }
+  &__title {
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @media screen and (max-width: $desktop - 1px) {
+      text-align: center;
+    }
+  }
+}
+
+// spam form
+
+.spam {
+  @media screen and (max-width: $desktop) {
+    width: 100%;
+    text-align: center;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  @media screen and (min-width: $desktop) {
+    &__field {
+      display: flex;
+      align-items: baseline;
+    }
+  }
+}
+
+.spam__input {
+  height: 50px;
+  width: 100%;
+
+  padding-left: 16px;
+  padding-right: 16px;
+
+  border-radius: 4px;
+  border: 1px solid var(--footer-form-border);
+  background-color: inherit;
+  color: var(--white-color);
+
+  .spam__field:focus-within & {
+    outline: none;
+    border-color: var(--accent-color);
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: block;
+    width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: inline-block;
+    margin-right: 12px;
+    width: 358px;
+  }
+}
+
+.spam__icon {
+  fill: var(--white-color);
+  margin-left: 12px;
+}

@@ -1,0 +1,21 @@
+:root {
+  --main-color: #212121;
+  --second-color: #757575;
+  --accent-color: #2196f3;
+  --white-color: #fff;
+  --bg-dark: #2f303a;
+  --btn-hover: #188ce8;
+  --bg-our-team: #f5f4fa;
+  --bg-filter-btn: #f5f4fa;
+  --brd-card-title: #eeeeee;
+  --icon-color: #afb1b8;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --trans-duration: 250ms;
+  --placeholder-text-color: rgba(117, 117, 117, 0.5);
+  --footer-form-border: rgba(255, 255, 255, 0.3);
+}
+
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1200px;
+$hero-overlay: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
