@@ -1,101 +1,135 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <meta name="keywords" content="вёрстка, HTML, CSS, блог">
-    <meta name="description" content="Блог о процессе обучения веб-технологиям">
-    <title>Junior Developer Web-Page</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Old+Standard+TT&display=swap&subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header class="page-header">
-      <div class="container">
-        <a class="header-email" href="mailto:vladik719@gmail.com">vladik719@gmail.com</a>
-        <a class="header-phone" href="tel:+48886516270">+48 886 516 270</a>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="keywords" content="вёрстка, HTML, CSS, блог">
+  <meta name="description" content="Блог о процессе обучения веб-технологиям">
+  <title>Junior Developer Web-Page</title>
+  <link
+    href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Old+Standard+TT&display=swap&subset=cyrillic"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="page-header">
+    <div class="container header__positioning--right">
+      <a class="header__contacts header__email" href="mailto:vladik719@gmail.com">
+        vladik719@gmail.com
+      </a>
+      <a class="header__contacts header__phone" href="tel:+48886516270">
+        +48 886 516 270
+      </a>
     </div>
-    </header>
-    <main>
-<!--       <nav>
-        <div class="container">
-        Navigation
+  </header>
+  <main>
+    <section class="hero-image">
+      <div class="container">
+        <h1 class="heading">Vladyslav Svitana</h1>
+        <p class="hero__description">Junior web-developer</p>
       </div>
-      </nav> -->
-      <section class="hero-image">
-        <div class="container">
-          <h1 class="heading">Vladyslav Svitana</h1>
-          <p>Junior web-developer</p>
-        </div>
-      </section>
-      <section>
-        <article class="container">
-         <p>Welcome to my portfolio site. I always had passion for coding and that's probably the reason why I started to code in the first place. The process of improvement and honing of my web-designer skills to the highest degree genuinely brings me lots of pleasure.</p>
-       </article>
-      </section>
-      <section class="intro">
-        <div class="container">
-         <h2 class="subheading">Let's get acquainted</h2>
-         <p>My name is Vladyslav, I speak 4 languages (Polish, English, Russian and Ukrainian) and I've been learning programming for almost 2 months. I enjoy creating different kind of web-pages and I currently explore my skills on the implementation of JS scripts to my page. I have decently developed my abilities for  reasonable, coherent thinking as well as stress coping methods, which comes in handy when I have a deadline to meet. Developing web-pages gives me a great pleasure and I'm constantly looking for opportunities to apply my skills and broaden up my knowledge of web-development! </p>
+    </section>
+    <section class="intro">
+      <div class="container">
+        <p class="intro__description">Welcome to my portfolio site. I always had passion for coding and that's probably
+          the reason why I started to code in the first place. The process of improvement and honing of my web-designer
+          skills to the highest degree genuinely brings me lots of pleasure.</p>
+      </div>
+    </section>
+    <section class="portfolio">
+      <div class="container">
+        <h2 class="subheading">Let's get acquainted</h2>
+        <p class="portfolio__description">My name is Vladyslav, I speak 4 languages (Polish, English, Russian and
+          Ukrainian) and I've been learning programming for almost 2 months. I enjoy creating different kind of
+          web-pages and I currently explore my skills on the implementation of JS scripts to my page. I have decently
+          developed my abilities for reasonable, coherent thinking as well as stress coping methods, which comes in
+          handy when I have a deadline to meet. Developing web-pages gives me a great pleasure and I'm constantly
+          looking for opportunities to apply my skills and broaden up my knowledge of web-development! </p>
         <figure class="user-image">
           <img src="files/user.jpg" width="928" height="536" alt="My photo">
         </figure>
-       </div>
-      <div class="container">
         <h2 class="subheading">My projects</h2>
-      <figure class="project-image">
-        <img src="files/project.jpg" width="928" height="536" alt="Home goods store Web-Site">
-         <h2>My personal blog (learning project)</h2>
-          <p>My first web-site</p>
-         <a class="button" href="source/project-1/index.html">
-          Open blog's Web-Page
-         </a>
-      </figure>
-      <figure class="project-image">
-        <img src="files/project_2.jpg" width="928" height="536" alt="Home goods store Web-Site">
-         <h2>Philosophical Reasoning Blog</h2>
-          <p>By creating this web-page i learned how to use both 'float' property and some other pseudo-classes, I wasn't familiar with before.
-          Apart from that, it gave me some better understanding of positioning with float and shred light on how to develop header & footer backgrounds using 'linear gradient' properties.</p>
-         <a class="button" href="source/project-2/web-site/index.html">
-          Open Philosophy Blog
-       </a>
-      </figure>
-      <figure class="project-image">
-        <img src="files/project_3.jpg" width="928" height="536" alt="Home goods store Web-Site">
-         <h2>Venturion Law Firm Web-Site</h2>
-          <p>Working over my 3-rd web-page I had a chance to polish up my html, css and JS skills even further. In order to develop this landing page I was required to study html, css, js and BEM methodology. By creating the project I've gained a lot of valuable experience on html & css coding, which led me to more profound understanding of the blocks semantics, their positioning and behaviour. To say even more, I also managed to broaden my knowledge of various css block and text properties as well as their values. Last, but not least - I've created a few different forms using JS and php scripts and then developed the validation methods for the aforementioned forms.</p>
-         <a class="button" href="source/project-3/index.html">
-          Open Law Firm Web-Page
-       </a>
-      </figure>
-      <figure class="project-image">
-        <img src="files/project_4.jpg" width="928" height="536" alt="TinDog Application Page">
-         <h2>TinDog Application Page</h2>
-          <p>Working over my 4-th web-page I mastered bootstrap library and improved my css and javascript skills. By doing so I also got more practical experience on how one needs to use classes and inheritance in css as well as refactoring techniques, which let me improve readibility and logical structure of my code. </p>
-         <a class="button" href="source/project-4/index.html">
-          Open TinDog Application Page
-       </a>
-      </figure>
-    </div>
-      <div class="skills container">
-        <h3>My coding skills</h3>
-        <dl class="skills-list">
-          <dt class="skill-html">HTML</dt>
-          <dd class="level"><div style="width: 60%;">80%</div></dd>
-          <dt class="skill-css">CSS</dt>
-          <dd class="level"><div style="width: 60%;">60%</div></dd>
-          <dt class="skill-js">JS</dt>
-          <dd class="level"><div style="width: 60%;">60%</div></dd>
-          <dt class="skill-bs">Bootstrap</dt>
-          <dd class="level"><div style="width: 60%;">60%</div></dd>
-        </dl>
+        <figure class="project-image">
+          <img src="files/project.jpg" width="928" height="536" alt="Home goods store Web-Site">
+          <h3 class="project-image__heading">Web-Studio Developers Project</h3>
+          <p class="portfolio__description">Working over my 3-rd web-page I had a chance to polish up my html, css and
+            JS skills even further. In order to develop
+            this landing page I was required to study html, css, js and BEM methodology. By creating the project I've
+            gained a lot
+            of valuable experience on html & css coding, which led me to more profound understanding of the blocks
+            semantics, their
+            positioning and behaviour.</p>
+          <a class="button" href="source/project-1/index.html">
+            Open Web-Studio Web-Page
+          </a>
+        </figure>
+        <figure class="project-image">
+          <img src="files/project_2.jpg" width="928" height="536" alt="Home goods store Web-Site">
+          <h3 class="project-image__heading">Philosophical Reasoning Blog</h3>
+          <p class="portfolio__description">By creating this web-page i learned how to use both 'float' property and
+            some other pseudo-classes, I wasn't familiar with before.
+            Apart from that, it gave me some better understanding of positioning with float and shred light on how to
+            develop header & footer backgrounds using 'linear gradient' properties.Working over this web-page I had a
+            chance to polish up my html, css and JS skills even further.</p>
+          <a class="button" href="source/project-2/web-site/index.html">
+            Open Philosophy Blog
+          </a>
+        </figure>
+        <figure class="project-image">
+          <img src="files/project_3.jpg" width="928" height="536" alt="Home goods store Web-Site">
+          <h3 class="project-image__heading">Venturion Law Firm Web-Site</h3>
+          <p class="portfolio__description"> In order to develop this landing page I was required to study html, css, js
+            and BEM methodology. By creating the project I've gained a lot of valuable experience on html & css coding,
+            which led me to more profound understanding of the blocks semantics, their positioning and behaviour. To say
+            even more, I also managed to broaden my knowledge of various css block and text properties as well as their
+            values. Last, but not least - I've created a few different forms using JS and php scripts and then developed
+            the validation methods for the aforementioned forms.</p>
+          <a class="button" href="source/project-3/index.html">
+            Open Law Firm Web-Page
+          </a>
+        </figure>
+        <figure class="project-image">
+          <img src="files/project_4.jpg" width="928" height="536" alt="TinDog Application Page">
+          <h3 class="project-image__heading">TinDog Application Page</h3>
+          <p class="portfolio__description">Working over my 4-th web-page I mastered bootstrap library and improved my
+            css and javascript skills. By doing so I also got more practical experience on how one needs to use classes
+            and inheritance in css as well as refactoring techniques, which let me improve readibility and logical
+            structure of my code. </p>
+          <a class="button" href="source/project-4/index.html">
+            Open TinDog Application Page
+          </a>
+        </figure>
+        <div class="skills container">
+          <h2 class="subheading">My coding skills</h2>
+          <dl class="skills-list">
+            <dt class="skill-html instruments">HTML</dt>
+            <dd class="level">
+              <div class="percentage" style="width: 80%;">80%</div>
+            </dd>
+            <dt class="skill-css instruments">CSS</dt>
+            <dd class="level">
+              <div class="percentage" style="width: 80%;">80%</div>
+            </dd>
+            <dt class="skill-js instruments">JS</dt>
+            <dd class="level">
+              <div class="percentage" style="width: 60%;">60%</div>
+            </dd>
+            <dt class="skill-bs instruments">Bootstrap</dt>
+            <dd class="level">
+              <div class="percentage" style="width: 60%;">60%</div>
+            </dd>
+          </dl>
+        </div>
       </div>
-      </section>
-    </main>
-    <footer class="page-footer">
-      <div class="container">
-        <a class="footer-email" href="mailto:vladik719@gmail.com">vladik719@gmail.com</a>
-        <a class="footer-phone" href="tel:+48886516270">+48 886 516 270</a>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <div class="container header__positioning--right">
+      <a class="footer__contacts footer-email" href="mailto:vladik719@gmail.com">vladik719@gmail.com</a>
+      <a class="footer__contacts footer-phone" href="tel:+48886516270">+48 886 516 270</a>
     </div>
-    </footer>
-  </body>
+  </footer>
+</body>
+
 </html>
