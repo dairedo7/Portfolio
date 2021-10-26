@@ -89,7 +89,7 @@ body {
 }
 
 .user-image {
-  margin: 0 0 32px;
+  margin: 0 0 68px;
   text-align: center;
 }
 
@@ -153,6 +153,10 @@ body {
 .project-image {
   margin: 0 0 24px;
   text-align: center;
+}
+
+.project-image--high-margin { 
+  margin: 0 0 68px;
 }
 
 .button {
