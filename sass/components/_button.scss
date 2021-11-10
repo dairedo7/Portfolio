@@ -1,0 +1,120 @@
+.btn {
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: 1px solid var(--orange-color);
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  color: var(--main-color);
+  background: var(--white-color) transparent;
+
+  transition: background-color var(--timing-function) var(--trans-duration);
+
+  &:hover,
+  &:focus {
+    color: var(--white-color);
+    background-color: var(--orange-color);
+    box-shadow: -4px 0px 8px rgba(0, 0, 0, 0.04),
+      -2px 0px 4px rgba(0, 0, 0, 0.08), -1px 0px 3px rgba(0, 0, 0, 0.16);
+  }
+  &--dark-theme {
+    color: var(--white-color);
+  }
+}
+
+.btn {
+  @media screen and (min-width: $tablet) {
+  }
+}
+
+.about-btn {
+  width: 163px;
+  height: 40px;
+  padding: 12px 20px;
+}
+
+.btn--centered {
+  display: block;
+  margin: 0 auto;
+  @media screen and (min-width: $tablet) {
+    margin: 0;
+    padding: 12px 38px;
+  }
+}
+
+.header__burger-icon {
+  right: 20px;
+  transition: fill var(--timing-function) var(--trans-duration);
+  .header__burger-btn:hover &,
+  .header__burger-btn:focus & {
+    fill: var(--orange-color);
+  }
+}
+
+.btn-hidden {
+  @media screen and (min-width: $tablet) {
+    display: none;
+    clip: rect(0, 0, 0, 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
+}
+
+.contacts__btn {
+  color: var(--white-color);
+  @media screen and(min-width: $tablet) {
+    padding: 12px 20px;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: 40px;
+  }
+}
+
+.hero-section__btn {
+  padding: 8px 0;
+
+  font-family: Open Sans, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  color: var(--white-color);
+  background-color: transparent;
+  outline: none;
+  border-image: none;
+  border: none;
+  border-bottom: 1px solid;
+  &:disabled {
+    color: rgba(157, 164, 189, 0.6);
+  }
+  &:hover {
+    color: var(--orange-color);
+  }
+  &:active {
+    -webkit-animation: btnPulsation var(--trans-duration);
+    animation: btnPulsation var(--trans-duration);
+  }
+}
+
+.hero-section__btn__back {
+  color: var(--white-color);
+  padding-right: 22px;
+  margin-right: 26px;
+  transition: color var(--timing-function) var(--trans-duration);
+}
+
+.hero-section__btn__forward {
+  padding-left: 13px;
+  transition: color var(--timing-function) var(--trans-duration);
+}
