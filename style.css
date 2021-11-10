@@ -3,6 +3,9 @@
   --btn-color: rgb(33, 150, 243);
   --white-color: #fff;
   --background-color: #f2f4f6;
+  --btn-shadow: 0px 1px 1px rgb(0 0 0 / 12%), 0px 3px 3px rgb(0 0 0 / 6%), 1px 3px 7px rgb(0 0 0 / 36%);
+  --img-shadow: 0px 1px 1px rgb(0 0 0 / 12%), 0px 4px 4px rgb(0 0 0 / 6%), 1px 4px 6px rgb(0 0 0 / 36%);
+
 }
 
 body {
@@ -18,10 +21,21 @@ body {
   background-position: top center;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   max-width: 928px;
   margin: 0 auto;
   padding: 0 16px;
+}
+
+.main-photo {
+  display: inline-block;
+  width: 200px;
 }
 
 .page-header {
@@ -155,6 +169,11 @@ body {
   text-align: center;
 }
 
+.image__link:hover .image {
+  border: 1px solid white;
+  box-shadow: var(--img-shadow);
+}
+
 .project-image--high-margin { 
   margin: 0 0 68px;
 }
@@ -169,10 +188,13 @@ body {
   border-radius: 4px;
   background-color: var(--btn-color);
   color: var(--white-color);
+
+  box-shadow: var(--btn-shadow);
 }
 
 .button:hover {
   background-color: var(--btn-accent-color);
+
 }
 
 .page-footer {
