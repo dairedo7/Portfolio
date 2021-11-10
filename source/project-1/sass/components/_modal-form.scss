@@ -28,7 +28,7 @@
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-  color: inherit;
+
   background-color: var(--white-color);
 
   transition-duration: var(--trans-duration);
@@ -67,12 +67,15 @@
 }
 
 .agreement__label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
   margin-bottom: 10px;
   font-size: 12px;
   line-height: 1.17;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
   color: var(--second-color);
 
   @media screen and (min-width: $desktop) {
@@ -112,6 +115,10 @@
     height: 15px;
     border: none;
   }
+}
+
+.spam__agreement {
+  text-align: center;
 }
 
 .agreement__link {

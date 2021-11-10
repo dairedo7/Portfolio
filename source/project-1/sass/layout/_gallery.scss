@@ -6,12 +6,13 @@
   &__item {
     position: relative;
     margin-bottom: 30px;
+    
 
     &:last-child {
       margin-bottom: 0;
     }
 
-    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+    @media screen and (min-width: $tablet) {
       width: 354px;
 
       &:not(:nth-child(2n)) {
@@ -23,7 +24,7 @@
     }
 
     @media screen and (min-width: $desktop) {
-      width: 370px;
+  
       &:not(:nth-child(3n)) {
         margin-right: 30px;
       }
@@ -33,9 +34,11 @@
     }
   }
 }
-.card {
-  display: block;
 
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   transition: box-shadow var(--trans-duration) var(--timing-function);
 
   &:hover,
@@ -54,6 +57,7 @@
     width: 100%;
   }
 }
+
 .card__overlay {
   position: absolute;
   top: 0;
@@ -79,6 +83,7 @@
 }
 
 .card__title {
+  flex-grow: 1;
   padding: 20px 24px;
   border: 1px solid var(--brd-card-title);
   border-top: 0;

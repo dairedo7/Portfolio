@@ -69,7 +69,6 @@
 .modal__close-btn {
   position: absolute;
   @media screen and (max-width: $mobile - 1px) {
-    top: 100px;
     right: 20px;
   }
   top: 8px;

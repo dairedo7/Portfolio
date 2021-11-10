@@ -33,6 +33,11 @@ img {
   padding: 0 16px;
 }
 
+.image-main {
+  display: inline-block;
+  width: 200px;
+}
+
 .main-photo {
   display: inline-block;
   width: 200px;
