@@ -97,7 +97,8 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo,
+ monospace;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -1818,7 +1819,7 @@ button {
   .members__item {
     flex-basis: calc((100% / 3) - 30px);
   }
-  .members__item:nth-child(-n + 2) {
+  .members__item:nth-child(-n + 3) {
     margin-right: 30px;
   }
 }
