@@ -44,9 +44,14 @@
     }
   }
   .mobile-menu__close-icon {
-    width: 19px;
-    height: 19px;
+    width: 40px;
+    height: 40px;
     fill: var(--main-color);
+
+    @media screen and (min-width: $tablet){
+      width: 19px;
+      height: 19px;
+    }
 
     .mobile-menu__close-btn:hover &,
     .mobile-menu__close-icon:focus & {

@@ -5,26 +5,24 @@
     modal: document.querySelector("[data-modal]"),
   };
 
-  refs.openModalBtn.addEventListener("click", toggleModal);
-  refs.closeModalBtn.addEventListener("click", toggleModal);
+  refs.openModalBtn.addEventListener("click", openModal);
+  refs.closeModalBtn.addEventListener("click", closeModal);
 
-  function toggleModal() {
+  function openModal() {
     refs.modal.classList.toggle("is-hidden");
-    document.body.classList.toggle("modal-open");
+    window.addEventListener('keydown', handleEcsClose);
+  }
+
+  function closeModal() {
+    refs.modal.classList.toggle("is-hidden");
+    window.removeEventListener('keydown', handleEcsClose);
+  }
+
+  function handleEcsClose(evt) {
+    if (evt.code === "Escape") {
+      closeModal();
+      return;
+    }
+    console.log(evt);
   }
 })();
-
-
-// var scaleDown;
-// var visuallyShown = document.querySelector(".visually-shown");
-// var visuallyHidden = document.querySelector(".visually-hidden");
-// var theVideo = document.querySelector("video");
-// var theVideo = document.querySelector("modal__video");
-
-// visuallyShown.addEventListener("scale-down", toggleVisibility);
-// visuallyHidden.addEventListener("scale-up", toggleVisibility);
-
-// function toggleVisibility() {
-//   scaleDown.classList.toggle(".visually-hidden");
-//   document.body.classList.toggle("video");
-// }

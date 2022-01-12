@@ -1,8 +1,8 @@
 .studio-wrapper {
-  @media screen and (max-width: $tablet) {
+  @media screen and (max-width: $tablet - 1px) {
     margin-bottom: 60px;
   }
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $desktop - 1px) {
     margin-right: 70px;
   }
 }
@@ -70,7 +70,7 @@
   & .studio__item {
     margin-bottom: 9px;
 
-    @media screen and (max-width: $desktop) {
+    @media screen and (max-width: $desktop - 1px) {
       text-align: center;
     }
   }
@@ -93,7 +93,7 @@
 // spam form
 
 .spam {
-  @media screen and (max-width: $desktop) {
+  @media screen and (max-width: $desktop - 1px) {
     width: 100%;
     text-align: center;
   }
@@ -147,4 +147,15 @@
 .spam__icon {
   fill: var(--white-color);
   margin-left: 12px;
+}
+
+.spam__btn {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 0;
+  @media screen and (max-width: $desktop - 1px) {
+    margin-top: 20px;
+  }
 }

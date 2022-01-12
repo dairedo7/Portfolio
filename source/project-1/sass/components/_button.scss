@@ -44,6 +44,7 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 15%);
   border: none;
   border-radius: 4px;
+  cursor: pointer;
 
   transition-duration: var(--trans-duration);
   transition-property: background-color;
@@ -55,16 +56,6 @@
   }
 }
 
-.spam__btn {
-  display: flex;
-  align-items: center;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 0;
-  @media screen and (max-width: $desktop - 1px) {
-    margin-top: 20px;
-  }
-}
 
 .modal__close-btn {
   position: absolute;
@@ -83,4 +74,14 @@
   align-items: center;
   background-color: transparent;
   cursor: pointer;
+}
+
+.close-btn__icon {
+  fill: var(--main-color);
+  transition: fill var(--trans-duration) var(--timing-function);
+
+  .close-btn:hover &,
+  .close-btn:focus & {
+    fill: var(--accent-color);
+  }
 }
